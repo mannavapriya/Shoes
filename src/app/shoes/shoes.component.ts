@@ -44,7 +44,7 @@ export class ShoesComponent implements OnInit{
     this.search_model.shoes = this.toBool(this.shoeForm.get('shoes')?.value ?? "false");
     this.search_model.slippers = this.toBool(this.shoeForm.get('slippers')?.value ?? "false");
     this.search_model.boots = this.toBool(this.shoeForm.get('boots')?.value ?? "false");
-    console.log(this.search_model);
+    
     this.service.GetShoes(this.search_model).subscribe(data => {
       this.shoes = data;
     });
